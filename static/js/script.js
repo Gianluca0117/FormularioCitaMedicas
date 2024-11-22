@@ -111,16 +111,17 @@ function mostrarNotificacion(mensaje) {
 }
 
 // Seleccionamos el logo y la barra de navegación
-const logo = document.querySelector('.navbar .logo');
-const navbar = document.querySelector('.navbar');
+const logo = document.querySelector('.navbar .logo');  // Aquí seleccionamos el logo
+const navbar = document.querySelector('.navbar');  // Aquí seleccionamos la barra de navegación
 
-// Agregamos el evento al pasar el mouse sobre el logo
+// Evento cuando el puntero entra en el área del logo
 logo.addEventListener('mouseenter', () => {
-    navbar.classList.add('visible'); // Muestra la barra al pasar el mouse sobre el logo
+    navbar.classList.add('visible');  // Muestra la barra de menú cuando el puntero se acerca al logo
 });
 
-// Agregamos el evento al salir el mouse del logo
+// Evento cuando el puntero sale del área del logo
 logo.addEventListener('mouseleave', () => {
-    navbar.classList.remove('visible'); // Oculta la barra al quitar el mouse del logo
+    navbar.classList.remove('visible');  // Oculta el menú cuando el puntero se aleja
 });
+
 
