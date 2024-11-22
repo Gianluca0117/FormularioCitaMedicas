@@ -132,7 +132,7 @@ footer {
     transform: translateY(0);
 }
 body {
-    background-image: url('/static/Images/fondo.jpg');
+    background-image: url('https://github.com/Gianluca0117/FormularioCitaMedicas/raw/main/static/Images/fondo.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
