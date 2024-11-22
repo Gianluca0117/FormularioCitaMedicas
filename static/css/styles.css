@@ -142,7 +142,6 @@ body {
     font-family: 'Arial', sans-serif;
 }
 
-
 /* Barra superior */
 .navbar {
     background-color: #FF6F61; /* Color similar al del botón Registrar */
@@ -163,7 +162,7 @@ body {
     transition: opacity 0.5s ease, transform 0.5s ease; /* Animación de opacidad y movimiento */
 }
 
-/* Cuando el puntero esté cerca de la barra, la barra se expande */
+/* Cuando el puntero esté cerca del logo, la barra se expande */
 .navbar.visible {
     opacity: 1; /* Muestra la barra */
     pointer-events: auto; /* Permite interacción cuando está visible */
@@ -213,6 +212,7 @@ body {
 .navbar .logo {
     font-size: 24px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 /* Estilo para el botón Registrar */
@@ -239,7 +239,3 @@ button:hover {
 body {
     margin-top: 80px;
 }
-
-
-
-
