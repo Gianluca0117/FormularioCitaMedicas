@@ -110,19 +110,21 @@ function mostrarNotificacion(mensaje) {
     }, 3000);
 }
 
-// Seleccionamos el logo y la barra de navegación
-const logo = document.querySelector('.navbar .logo');  // Aquí seleccionamos el logo
-const navbar = document.querySelector('.navbar');  // Aquí seleccionamos la barra de navegación
+document.addEventListener('DOMContentLoaded', function () {
+    const logo = document.querySelector('.navbar .logo');  // Seleccionamos el logo
+    const navbar = document.querySelector('.navbar');  // Seleccionamos la barra de navegación
 
-// Evento cuando el puntero entra en el área del logo
-logo.addEventListener('mouseenter', () => {
-    navbar.classList.add('visible');  // Muestra la barra de menú cuando el puntero se acerca al logo
+    // Evento cuando el puntero entra en el área del logo
+    logo.addEventListener('mouseenter', () => {
+        navbar.classList.add('visible');  // Muestra el menú cuando el puntero se acerca al logo
+    });
+
+    // Evento cuando el puntero sale del área del logo
+    logo.addEventListener('mouseleave', () => {
+        navbar.classList.remove('visible');  // Oculta el menú cuando el puntero se aleja
+    });
 });
 
-// Evento cuando el puntero sale del área del logo
-logo.addEventListener('mouseleave', () => {
-    navbar.classList.remove('visible');  // Oculta el menú cuando el puntero se aleja
-});
 
 
 
