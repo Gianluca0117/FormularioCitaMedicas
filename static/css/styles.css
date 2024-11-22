@@ -142,100 +142,58 @@ body {
     font-family: 'Arial', sans-serif;
 }
 
-/* Barra superior */
+/* Barra de navegación */
 .navbar {
-    background-color: #FF6F61; /* Color similar al del botón Registrar */
-    color: white;
-    padding: 10px 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+    background-color: #FF5733;  /* Puedes cambiar el color al tono de tu botón */
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    z-index: 1000;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 10px 10px 0 0;
-    opacity: 0; /* Inicialmente oculta */
-    pointer-events: none; /* Evita interacción cuando está oculta */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Animación de opacidad y movimiento */
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 10;
 }
 
-/* Cuando el puntero esté cerca del logo, la barra se expande */
-.navbar.visible {
-    opacity: 1; /* Muestra la barra */
-    pointer-events: auto; /* Permite interacción cuando está visible */
-    transform: translateY(0); /* Muestra la barra */
+/* Logo (Texto) */
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
 }
 
-/* Menú en la barra */
+/* Menú oculto */
 .navbar .menu {
-    display: flex;
-    flex-direction: column;
-    opacity: 0; /* Ocultamos el menú inicialmente */
-    transition: opacity 0.5s ease; /* Transición para hacer que el menú aparezca */
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #FF5733;  /* El mismo color que la barra */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Al pasar el puntero sobre la barra, el menú se hace visible */
 .navbar.visible .menu {
-    opacity: 1; /* Hace visible el menú */
+    display: block;  /* Mostrar el menú cuando la barra tiene la clase 'visible' */
 }
 
-/* Estilo para los enlaces del menú */
+/* Estilo del menú */
 .navbar .menu ul {
-    list-style: none;
+    list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
 .navbar .menu ul li {
-    margin-left: 20px;
+    margin: 10px 0;
 }
 
 .navbar .menu ul li a {
     color: white;
     text-decoration: none;
-    font-size: 16px;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
+    font-size: 18px;
 }
 
-/* Efecto hover en los enlaces */
 .navbar .menu ul li a:hover {
-    background-color: white;
-    color: #FF6F61;
-}
-
-/* Ajuste para el logo en la barra */
-.navbar .logo {
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-/* Estilo para el botón Registrar */
-button {
-    background-color: #FF6F61;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Efecto hover en el botón */
-button:hover {
-    background-color: white;
-    color: #FF6F61;
-    transform: translateY(-2px);
-}
-
-/* Ajuste para que el contenido no quede oculto debajo de la barra */
-body {
-    margin-top: 80px;
+    color: #ddd;  /* Cambia el color cuando el enlace se pasa sobre él */
 }
