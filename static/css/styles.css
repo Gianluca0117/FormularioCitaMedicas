@@ -140,4 +140,109 @@ body {
     margin: 0;
     font-family: 'Arial', sans-serif;
     position: relative;
+    padding-top: 80px;
 }
+/* Barra de navegación */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    backdrop-filter: blur(5px); /* Efecto de desenfoque en el fondo */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+  
+  .logo h1 {
+    margin: 0,5;
+    font-size: 24px;
+    color: #ff9e80;
+  }
+  
+  .nav-bar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    margin-left: 20px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #ff9e80; /* Color amarillo en hover */
+  }
+  
+  /* Ícono de hamburguesa */
+  .menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .bar {
+    width: 30px;
+    height: 5px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.3s ease;
+  }
+  
+  /* Media Query para pantallas pequeñas (móviles) */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 60px; /* Ajustar la distancia desde la parte superior */
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+      backdrop-filter: blur(10px);
+      width: 100%;
+      text-align: center;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+  
+    .nav-links.active {
+      display: block;
+    }
+  
+    /* Animación de las barras del menú */
+    .menu-icon.active .bar:nth-child(1) {
+      transform: rotate(45deg);
+      position: relative;
+      top: 6px;
+    }
+  
+    .menu-icon.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .menu-icon.active .bar:nth-child(3) {
+      transform: rotate(-45deg);
+      position: relative;
+      top: -6px;
+    }
+  
+    .menu-icon {
+      display: flex;
+      z-index: 101;
+    }
+  }
