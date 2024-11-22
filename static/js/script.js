@@ -109,3 +109,15 @@ function mostrarNotificacion(mensaje) {
         }, 500);
     }, 3000);
 }
+
+// Seleccionamos la barra de navegación
+const navbar = document.querySelector('.navbar');
+
+// Escuchamos cuando el puntero del mouse se acerque a la parte superior de la página
+window.addEventListener('mousemove', (event) => {
+    if (event.clientY < 10) {
+        navbar.classList.add('visible'); // Muestra la barra
+    } else {
+        navbar.classList.remove('visible'); // Oculta la barra
+    }
+});
