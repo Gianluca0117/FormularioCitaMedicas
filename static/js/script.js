@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function soloNumeros(event) {
     const key = event.key;
-    const isNumber = /^[0-9]$/.test(key);
+    const isNumber = /^[0-10]$/.test(key);
     if (!isNumber && key !== "Backspace" && key !== "Tab") {
         event.preventDefault();
     }
