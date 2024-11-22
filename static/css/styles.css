@@ -22,6 +22,7 @@
     text-align: center;
 }
 
+
 .close {
     color: #aaa;
     float: right;
@@ -42,11 +43,13 @@ h2 {
     color: #333;
 }
 
+
 .card {
     max-width: 500px;
     margin: 0 auto;
     padding: 20px;
 }
+
 
 .input-group {
     margin-bottom: 15px;
@@ -59,6 +62,7 @@ h2 {
     display: block;
     color: #444;
 }
+
 
 .input-group input,
 .input-group select {
@@ -78,6 +82,7 @@ h2 {
     outline: none;
 }
 
+
 button.glass-button {
     width: 100%;
     padding: 10px 0;
@@ -95,7 +100,6 @@ button.glass-button:hover {
     background-color: rgba(255, 160, 122, 0.9);
     box-shadow: 0 6px 25px rgba(255, 160, 122, 0.6);
 }
-
 footer {
     text-align: center;
     margin-top: 20px;
@@ -126,100 +130,4 @@ footer {
 .notificacion.show {
     opacity: 1;
     transform: translateY(0);
-}
-
-body {
-    background-image: url('/FormularioCitaMedicas/static/Images/fondo.jpg'); 
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-}
-
-/* Barra de navegación */
-.navbar {
-    background-color: #FF5733;  /* El color de la barra */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    position: relative;
-    z-index: 10;
-}
-
-/* Agregar una animación cuando el logo se ve */
-.navbar .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-    cursor: pointer;
-    text-align: center;
-    z-index: 11;
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-/* Animación para el logo cuando pasa el mouse por encima */
-.navbar .logo.animate-logo {
-    animation: logo-animation 0.5s ease-in-out;
-}
-
-@keyframes logo-animation {
-    0% {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.navbar .logo:hover {
-    transform: scale(1.1); /* Hace que el logo crezca un poco */
-    color: #FF9E80; /* Cambia el color del logo al pasar el ratón */
-}
-
-/* Menú oculto */
-.navbar .menu {
-    display: none;
-    position: absolute;
-    top: 50px;
-    right: 0;
-    background-color: #FF5733;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-    opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    transform: translateY(-10px);
-}
-
-/* Menú visible cuando se pasa el mouse por el logo */
-.navbar.visible .menu {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Estilo del menú */
-.navbar .menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar .menu ul li {
-    margin: 10px 0;
-}
-
-.navbar .menu ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-.navbar .menu ul li a:hover {
-    color: #ddd;
 }
