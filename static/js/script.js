@@ -109,3 +109,11 @@ function mostrarNotificacion(mensaje) {
         }, 500);
     }, 3000);
 }
+
+const menuIcon = document.getElementById('menu-icon');
+const navLinks = document.querySelector('.nav-links');
+
+menuIcon.addEventListener('click', () => {
+  navLinks.classList.toggle('active');  // Mostrar u ocultar el menú
+  menuIcon.classList.toggle('active');  // Activar la animación de las rayas
+});
