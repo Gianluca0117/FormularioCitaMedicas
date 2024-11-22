@@ -147,7 +147,7 @@ body {
 .navbar {
     background-color: #FF6F61; /* Color similar al del botón Registrar */
     color: white;
-    padding: 15px 20px;
+    padding: 10px 20px;
     position: fixed;
     top: 0;
     left: 0;
@@ -236,5 +236,6 @@ button:hover {
 body {
     margin-top: 80px;
 }
+
 
 
