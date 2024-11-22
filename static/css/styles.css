@@ -153,13 +153,20 @@ body {
     z-index: 10;
 }
 
+/* Agregar una animación cuando el logo se ve */
 .navbar .logo {
     font-size: 24px;
     font-weight: bold;
     color: white;
     cursor: pointer;
-    text-align: center; /* Asegura que el texto esté centrado */
-    z-index: 11; /* Asegura que el logo no se oculte por otros elementos */
+    text-align: center;
+    z-index: 11;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.navbar .logo:hover {
+    transform: scale(1.1); /* Hace que el logo crezca un poco */
+    color: #FF9E80; /* Cambia el color del logo al pasar el ratón */
 
 }
 
