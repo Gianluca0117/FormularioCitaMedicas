@@ -83,10 +83,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     logo.addEventListener('mouseenter', () => {
         navbar.classList.add('visible');
+        // Aplicar la animación de aparición del logo
+        logo.classList.add('animate-logo');
     });
 
     logo.addEventListener('mouseleave', () => {
         navbar.classList.remove('visible');
+        // Remover la animación de aparición del logo
+        logo.classList.remove('animate-logo');
     });
 
     // Solo permitir números en campos específicos
@@ -95,5 +99,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
     cedulaInput.addEventListener('keypress', soloNumeros);
     telefonoInput.addEventListener('keypress', soloNumeros);
-
-  
+});
