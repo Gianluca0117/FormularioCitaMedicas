@@ -171,10 +171,14 @@ body {
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    opacity: 0;  /* Menú inicialmente invisible */
+    transition: opacity 0.3s ease-in-out;  /* Transición suave */
 }
 
+/* Menú visible */
 .navbar.visible .menu {
-    display: block;  /* Mostrar el menú cuando la barra tiene la clase 'visible' */
+    display: block;
+    opacity: 1;  /* Hacerlo visible cuando se agrega la clase 'visible' */
 }
 
 /* Estilo del menú */
