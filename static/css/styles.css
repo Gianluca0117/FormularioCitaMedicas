@@ -143,7 +143,7 @@ body {
 }
 
 
-/* Barra superior con animación de expansión */
+/* Barra superior */
 .navbar {
     background-color: #FF6F61; /* Color similar al del botón Registrar */
     color: white;
@@ -158,12 +158,15 @@ body {
     z-index: 1000;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     border-radius: 10px 10px 0 0;
-    transform: translateY(-100%); /* Inicialmente oculta la barra */
-    transition: transform 0.5s ease; /* Transición suave para la animación */
+    opacity: 0; /* Inicialmente oculta */
+    pointer-events: none; /* Evita interacción cuando está oculta */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Animación de opacidad y movimiento */
 }
 
 /* Cuando el puntero esté cerca de la barra, la barra se expande */
-.navbar:hover {
+.navbar.visible {
+    opacity: 1; /* Muestra la barra */
+    pointer-events: auto; /* Permite interacción cuando está visible */
     transform: translateY(0); /* Muestra la barra */
 }
 
@@ -176,7 +179,7 @@ body {
 }
 
 /* Al pasar el puntero sobre la barra, el menú se hace visible */
-.navbar:hover .menu {
+.navbar.visible .menu {
     opacity: 1; /* Hace visible el menú */
 }
 
@@ -236,6 +239,7 @@ button:hover {
 body {
     margin-top: 80px;
 }
+
 
 
 
