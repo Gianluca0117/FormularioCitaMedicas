@@ -144,7 +144,7 @@ body {
 
 /* Barra de navegación */
 .navbar {
-    background-color: #FF5733;  /* Puedes cambiar el color al tono de tu botón */
+    background-color: #FF5733;  /* El color de la barra */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -153,7 +153,7 @@ body {
     z-index: 10;
 }
 
-/* Logo (Texto) */
+/* Logo */
 .navbar .logo {
     font-size: 24px;
     font-weight: bold;
@@ -167,18 +167,15 @@ body {
     position: absolute;
     top: 50px;
     right: 0;
-    background-color: #FF5733;  /* El mismo color que la barra */
+    background-color: #FF5733;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-    opacity: 0;  /* Menú inicialmente invisible */
-    transition: opacity 0.3s ease-in-out;  /* Transición suave */
 }
 
-/* Menú visible */
+/* Menú visible cuando se pasa el mouse por el logo */
 .navbar.visible .menu {
-    display: block;
-    opacity: 1;  /* Hacerlo visible cuando se agrega la clase 'visible' */
+    display: block;  
 }
 
 /* Estilo del menú */
@@ -199,5 +196,5 @@ body {
 }
 
 .navbar .menu ul li a:hover {
-    color: #ddd;  /* Cambia el color cuando el enlace se pasa sobre él */
+    color: #ddd;
 }
