@@ -190,7 +190,7 @@ footer {
 }
 
 body {
-    background-image: url('/static/images/fondo.jpg');
+    background-image: url('FormularioCitaMedicas/static/images/fondo.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
